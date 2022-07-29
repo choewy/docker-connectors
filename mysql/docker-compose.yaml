@@ -3,6 +3,7 @@ version: '3.7'
 services:
   db:
     build: ./docker
+    container_name: mysql
     env_file:
       - .env
     cap_add:
