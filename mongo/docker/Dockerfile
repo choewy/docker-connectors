@@ -1,0 +1,6 @@
+FROM mongo
+EXPOSE 27017
+
+ADD ./mongod.conf /etc/mongod.conf.origs
+
+CMD ["mongod"]
