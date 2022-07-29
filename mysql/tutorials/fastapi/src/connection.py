@@ -11,10 +11,10 @@ class Connection:
       database='service'
     )
 
-  def show_tables(self) -> List[str]:
-    query = 'SHOW TABLES;'
+  def show_databases(self) -> List[str]:
+    query = 'SHOW DATABASES;'
     curs = self.__conn.cursor()
     curs.execute(query)
     data = curs.fetchall()
     curs.close()
-    return [table[0] for table in data]
+    return [db[0] for db in data]

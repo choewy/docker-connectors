@@ -9,6 +9,6 @@ connection = Connection()
 async def mysql_connect() -> Dict[bool, List[str]]:
   return { 
     "ok": True, 
-    "tables": connection.show_tables() 
+    "databases": connection.show_databases() 
   }
 
